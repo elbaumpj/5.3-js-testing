@@ -1,9 +1,9 @@
 var $ = require('jquery');
 var models = require('./models');
 var views = require('./views');
-var template = require('../templates/application.hbs');
 
-$('body').append(template());
+
+
 
 $(function(){
   var view = new views.PostView();
@@ -17,6 +17,6 @@ $(function(){
 
 $('form').on('submit',function(event){
   event.preventDefault();
-  $(document).trigger('create:post', [{title: "Title", body: "Body"}];
+  $(document).trigger('create:post', [{title: "Title", body: "Body"}]);
 
 });
